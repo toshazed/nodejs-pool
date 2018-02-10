@@ -56,8 +56,9 @@ pm2 restart api --update-env
 
 which caddy
 sudo setcap 'cap_net_bind_service=+ep' /usr/local/bin/caddy
+
 # now reload the api
-pm2 restart api
+pm2 restart api --update-env
 sudo systemctl restart caddy.service
 
 # then check the api
